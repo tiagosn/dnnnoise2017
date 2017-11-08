@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+PYTHON=python2.7
+
+THEANO_FLAGS=device=gpu,floatX=float32 $PYTHON create_original_datasets.py
+THEANO_FLAGS=device=gpu,floatX=float32 $PYTHON create_noisy_datasets.py
+THEANO_FLAGS=device=gpu,floatX=float32 $PYTHON create_denoised_datasets.py
